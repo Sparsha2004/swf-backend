@@ -19,10 +19,10 @@ class NameIn(BaseModel):
 async def ping():
     return {"message": "pong"}
 
-@app.post("/api/greet")
+@app.get("/api/greet")
 async def greet(payload: NameIn):
     return {"message": f"Hello, {payload.name}!"}
 
-@app.post("/api/hate")
+@app.get("/api/hate")
 async def greet(payload: NameIn):
     return {"message": f"I hate you, {payload.name}!"}
